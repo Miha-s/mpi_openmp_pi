@@ -23,9 +23,16 @@ mpiexec --version
 
 # Time comparison
 
-
+8 cores
 | Number of dots | sequential (s) | OpenMP (s) | MPI (s) | Speedup OpenMP | Speedup MPI
 | ----  | -----  |  ----  | ---- | ----- | ----
 | 100M  | 0.93   | 0.2    | 0.67 | 4.65  | 1.39
 | 500M  | 4.71   | 0.98   | 1.45 | 4.8   | 3.24
 | 1000M | 9.57   | 2      | 2.45 | 4.78  | 3.9
+
+4 cores
+| Number of dots | sequential (s) | OpenMP (s) | MPI (s) | Speedup OpenMP | Speedup MPI
+| ----  | -----  |  ----  | ---- | ----- | ----
+| 100M  | 0.93   |        |  |   | 
+| 500M  | 4.71   |        |  |    | 
+| 1000M | 9.57   |        |  |   | 

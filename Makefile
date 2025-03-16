@@ -10,5 +10,5 @@ pi_sequential: pi_sequential.cpp
 	g++ -O0 -o pi_sequential pi_sequential.cpp
 
 run_pi_mpi: pi_mpi
-	mpirun --use-hwthread-cpus -n 8 ./pi_mpi $(POINTS)
+	mpirun --use-hwthread-cpus -n 4 ./pi_mpi $(POINTS)
 

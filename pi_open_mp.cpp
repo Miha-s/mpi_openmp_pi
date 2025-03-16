@@ -13,7 +13,7 @@ int main(int argc, char* argv[])
     long num_points = std::stol(argv[1]);
     long points_in_circle = 0;
 
-    #pragma omp parallel
+    #pragma omp parallel num_threads(4)
     {
         unsigned int seed = omp_get_thread_num();
         long local_points_in_circle = 0;
