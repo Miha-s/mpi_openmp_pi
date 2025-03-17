@@ -1,10 +1,9 @@
 #include <iostream>
 #include <omp.h>
-#include <unistd.h>
+#include <cstdlib>
+#include <ctime>
 
-
-int main(int argc, char* argv[])
-{
+int main(int argc, char* argv[]) {
     if (argc != 2) {
         std::cerr << "Usage: " << argv[0] << " <num_points>" << std::endl;
         return 1;
@@ -15,7 +14,7 @@ int main(int argc, char* argv[])
 
     #pragma omp parallel num_threads(4)
     {
-        unsigned int seed = omp_get_thread_num();
+        unsigned int seed = time(NULL) + omp_get_thread_num();
         long local_points_in_circle = 0;
 
         #pragma omp for
